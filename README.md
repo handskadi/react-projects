@@ -1,13 +1,17 @@
 # MK - ROAD TO REACT
 
-## bm-app:
+## bm-app
 
-- Collection of React compenents and Apps
+This directory contains a collection of React components and applications.
 
 ## learn-webpack
 
-- Practice of manual creation of a webpack from scratch and setp
+Here, you'll find the practice of manually creating a webpack setup from scratch, including step-by-step instructions.
 
 ## react-app
 
-- Collection of React compenents using Typscripte and its interfaces.
+This directory houses a collection of React components developed using TypeScript and its interfaces.
+
+**Author:**  
+Mohamed KADI  
+Frontend Software Engineer
