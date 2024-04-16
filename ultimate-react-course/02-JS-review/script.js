@@ -143,7 +143,7 @@ function getBook(id) {
   return data.find((d) => d.id === id);
 }
 
-const book = getBook(2);
+const book = getBook(1);
 
 //  Destructuring
 const {
@@ -170,4 +170,7 @@ const updateBoook = {
   // add new property
   madeBy: "Mohamed KADI",
 };
-updateBoook;
+
+// Template literals
+const summry = ` The Book ${title} was written ${author} with a ${pages}-pages & was published in ${publicationDate}`;
+summry;
