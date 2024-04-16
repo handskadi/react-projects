@@ -143,9 +143,9 @@ function getBook(id) {
   return data.find((d) => d.id === id);
 }
 
-//  Destructuring
-
 const book = getBook(2);
+
+//  Destructuring
 const {
   title,
   author,
@@ -158,7 +158,16 @@ const {
   translations,
 } = book;
 
-genres;
-const [g1, g2] = genres;
+const [g1, g2, ...othersG] = genres;
 
-g2;
+// Spreed operator
+const newGenres = [...genres, "MK Genre"];
+
+const updateBoook = {
+  ...book,
+  // overide property
+  hasMovieAdaptation: true,
+  // add new property
+  madeBy: "Mohamed KADI",
+};
+updateBoook;
