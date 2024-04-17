@@ -143,7 +143,7 @@ function getBook(id) {
   return data.find((d) => d.id === id);
 }
 
-const book = getBook(1);
+const book = getBook(2);
 
 //  Destructuring
 const {
@@ -156,6 +156,7 @@ const {
   reviews,
   revTitle,
   translations,
+  hasMovieAdaptation,
 } = book;
 
 const [g1, g2, ...othersG] = genres;
@@ -171,6 +172,26 @@ const updateBoook = {
   madeBy: "Mohamed KADI",
 };
 
+// Arrow function
+const getYear = (str) => str.split("-")[0];
+
 // Template literals
-const summry = ` The Book ${title} was written ${author} with a ${pages}-pages & was published in ${publicationDate}`;
-summry;
+const summry = ` The Book ${title} was written ${author} with a ${pages}-pages & was published in ${getYear(
+  publicationDate
+)}`;
+
+// Ternaires
+const ternairy = false ? "I am true" : " I am fale";
+const summry2 = ` The Book ${title} was written ${author} with a ${pages}-pages & was published in ${getYear(
+  publicationDate
+)}. The Book has ${hasMovieAdaptation ? "" : "not"} been adapted`;
+
+// Shortcircuiting
+console.log(true && "some vlaue");
+console.log(false || "some vlaue");
+
+const count = book.reviews.librarything.reviewsCount ?? "No Data";
+count;
+
+console.log(hasMovieAdaptation && "This book has a Movie");
+console.log(book.translations.spanish || "Not Translated");
