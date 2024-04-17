@@ -66,7 +66,7 @@ const data = [
     publicationDate: "1965-01-01",
     author: "Frank Herbert",
     genres: ["science fiction", "novel", "adventure"],
-    hasMovieAdaptation: true,
+    hasMovieAdaptation: false,
     pages: 658,
     translations: {
       spanish: "",
@@ -194,9 +194,32 @@ hasMovieAdaptation && "This book has a Movie";
 book.translations.spanish || "Not Translated";
 
 // Optional chaining ?.
-function getTotalReviewCount(book) {
+/*function getTotalReviewCount(book) {
   const goodreads = book.reviews?.goodreads?.reviewsCount;
   const librarything = book.reviews?.librarything?.reviewsCount ?? 0;
   return goodreads + librarything;
 }
-console.log(getTotalReviewCount(book));
+console.log(getTotalReviewCount(book));*/
+
+// Array Methods:
+// - Map method
+const books = getBooks();
+
+const x = [1, 2, 3, 4, 5, 6].map((item) => item * 2);
+
+const titles = books.map((el) => el.title);
+const essetialData = books.map((book) => ({
+  title: book.title,
+  author: book.author,
+  published: getYear(book.publicationDate),
+}));
+
+// - Filter method
+const longBooks = books
+  .filter((book) => book.pages > 500)
+  .filter((book) => book.hasMovieAdaptation);
+
+const adventureBooks = books
+  .filter((book) => book.genres.includes("adventure"))
+  .map((book) => book.title);
+adventureBooks;
