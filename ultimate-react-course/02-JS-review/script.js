@@ -143,7 +143,7 @@ function getBook(id) {
   return data.find((d) => d.id === id);
 }
 
-const book = getBook(2);
+const book = getBook(3);
 
 //  Destructuring
 const {
@@ -186,12 +186,17 @@ const summry2 = ` The Book ${title} was written ${author} with a ${pages}-pages 
   publicationDate
 )}. The Book has ${hasMovieAdaptation ? "" : "not"} been adapted`;
 
-// Shortcircuiting
-console.log(true && "some vlaue");
-console.log(false || "some vlaue");
+// Shortcircuiting && || ??
+true && "some vlaue";
+false || "some vlaue";
 
-const count = book.reviews.librarything.reviewsCount ?? "No Data";
-count;
+hasMovieAdaptation && "This book has a Movie";
+book.translations.spanish || "Not Translated";
 
-console.log(hasMovieAdaptation && "This book has a Movie");
-console.log(book.translations.spanish || "Not Translated");
+// Optional chaining ?.
+function getTotalReviewCount(book) {
+  const goodreads = book.reviews?.goodreads?.reviewsCount;
+  const librarything = book.reviews?.librarything?.reviewsCount ?? 0;
+  return goodreads + librarything;
+}
+console.log(getTotalReviewCount(book));
