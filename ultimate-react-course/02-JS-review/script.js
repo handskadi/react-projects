@@ -194,12 +194,11 @@ hasMovieAdaptation && "This book has a Movie";
 book.translations.spanish || "Not Translated";
 
 // Optional chaining ?.
-/*function getTotalReviewCount(book) {
+function getTotalReviewCount(book) {
   const goodreads = book.reviews?.goodreads?.reviewsCount;
   const librarything = book.reviews?.librarything?.reviewsCount ?? 0;
   return goodreads + librarything;
 }
-console.log(getTotalReviewCount(book));*/
 
 // Array Methods:
 // - Map method
@@ -222,12 +221,9 @@ const longBooks = books
 const adventureBooks = books
   .filter((book) => book.genres.includes("adventure"))
   .map((book) => book.title);
-adventureBooks;
 
 // - Reduce Method
 const pagesAllBooks = books.reduce((acc, book) => acc + book.pages, 0);
-pagesAllBooks;
-
 // Sort Method
 const arr = [3, 5, 7, 2, 4, 1, 9];
 const sorted = arr.slice().sort((a, b) => b - a);
@@ -236,4 +232,19 @@ const sortByPages = books
   .slice()
   .sort((a, b) => b.pages - a.pages)
   .map((b) => ({ title: b.title, pages: b.pages }));
-sortByPages;
+
+// Working with immutable arrays:
+
+// 1) Add a book object to array
+const newBoook = {
+  id: 6,
+  title: "Mk Future made by Allah",
+  publicationDate: "2024-04-18",
+  author: "Mohamed KADI",
+  hasMovieAdaptation: false,
+  pages: 359,
+};
+
+const booksAfterAdd = [...books, newBoook];
+
+booksAfterAdd;
