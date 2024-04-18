@@ -251,3 +251,16 @@ booksAfterAdd;
 // 2) Delete a book object from an array
 const booksAfterDelete = booksAfterAdd.filter((book) => book.id !== 3);
 booksAfterDelete;
+
+// Update a book object in the array
+const booksAfterUpdate = booksAfterDelete.map((book) =>
+  book.id === 6
+    ? {
+        ...book,
+        hasMovieAdaptation: true,
+        pages: 400,
+      }
+    : book
+);
+
+booksAfterUpdate;
