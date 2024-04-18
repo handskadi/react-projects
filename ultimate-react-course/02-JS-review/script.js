@@ -246,5 +246,8 @@ const newBoook = {
 };
 
 const booksAfterAdd = [...books, newBoook];
-
 booksAfterAdd;
+
+// 2) Delete a book object from an array
+const booksAfterDelete = booksAfterAdd.filter((book) => book.id !== 3);
+booksAfterDelete;
