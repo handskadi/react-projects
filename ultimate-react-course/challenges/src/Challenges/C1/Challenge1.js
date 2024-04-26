@@ -1,3 +1,4 @@
+import "./index.css";
 const skills = [
   {
     skill: "HTML+CSS",
