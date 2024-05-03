@@ -71,7 +71,7 @@ export function canDrive(age, countryCode) {
     return "Invalid country code";
   }
 
-  return age >= legalDrivingAge[countryCode];
+  return age >= legalDrivingAge[countryCode] && age <= 100;
 }
 
 // Lesson: Testing asynchronous code
