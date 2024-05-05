@@ -199,39 +199,39 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import { trackPageView } from './libs/analytics';</span></span></span>
-<span class="cstat-no" title="statement not covered" >import { getExchangeRate } from './libs/currency';</span>
-<span class="cstat-no" title="statement not covered" >import { isValidEmail, sendEmail } from './libs/email';</span>
-<span class="cstat-no" title="statement not covered" >import { charge } from './libs/payment';</span>
-<span class="cstat-no" title="statement not covered" >import security from './libs/security';</span>
-<span class="cstat-no" title="statement not covered" >import { getShippingQuote } from './libs/shipping';</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import { trackPageView } from "./libs/analytics";</span></span></span>
+<span class="cstat-no" title="statement not covered" >import { getExchangeRate } from "./libs/currency";</span>
+<span class="cstat-no" title="statement not covered" >import { isValidEmail, sendEmail } from "./libs/email";</span>
+<span class="cstat-no" title="statement not covered" >import { charge } from "./libs/payment";</span>
+<span class="cstat-no" title="statement not covered" >import security from "./libs/security";</span>
+<span class="cstat-no" title="statement not covered" >import { getShippingQuote } from "./libs/shipping";</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >// Lesson: Mocking modules</span>
 <span class="cstat-no" title="statement not covered" >export function getPriceInCurrency(price, currency) {</span>
-<span class="cstat-no" title="statement not covered" >  const rate = getExchangeRate('USD', currency);</span>
+<span class="cstat-no" title="statement not covered" >  const rate = getExchangeRate("USD", currency);</span>
 <span class="cstat-no" title="statement not covered" >  return price * rate;</span>
 <span class="cstat-no" title="statement not covered" >}</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >// Exercise</span>
 <span class="cstat-no" title="statement not covered" >export function getShippingInfo(destination) {</span>
 <span class="cstat-no" title="statement not covered" >  const quote = getShippingQuote(destination);</span>
-<span class="cstat-no" title="statement not covered" >  if (!quote) return 'Shipping Unavailable';</span>
+<span class="cstat-no" title="statement not covered" >  if (!quote) return "Shipping Unavailable";</span>
 <span class="cstat-no" title="statement not covered" >  return `Shipping Cost: $${quote.cost} (${quote.estimatedDays} Days)`;</span>
 <span class="cstat-no" title="statement not covered" >}</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >// Lesson: Interaction testing</span>
 <span class="cstat-no" title="statement not covered" >export async function renderPage() {</span>
-<span class="cstat-no" title="statement not covered" >  trackPageView('/home');</span>
+<span class="cstat-no" title="statement not covered" >  trackPageView("/home");</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >  return '&lt;div&gt;content&lt;/div&gt;';</span>
+<span class="cstat-no" title="statement not covered" >  return "&lt;div&gt;content&lt;/div&gt;";</span>
 <span class="cstat-no" title="statement not covered" >}</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >// Exercise</span>
 <span class="cstat-no" title="statement not covered" >export async function submitOrder(order, creditCard) {</span>
 <span class="cstat-no" title="statement not covered" >  const paymentResult = await charge(creditCard, order.totalAmount);</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >  if (paymentResult.status === 'failed')</span>
-<span class="cstat-no" title="statement not covered" >    return { success: false, error: 'payment_error' };</span>
+<span class="cstat-no" title="statement not covered" >  if (paymentResult.status === "failed")</span>
+<span class="cstat-no" title="statement not covered" >    return { success: false, error: "payment_error" };</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >  return { success: true };</span>
 <span class="cstat-no" title="statement not covered" >}</span>
@@ -240,7 +240,7 @@
 <span class="cstat-no" title="statement not covered" >export async function signUp(email) {</span>
 <span class="cstat-no" title="statement not covered" >  if (!isValidEmail(email)) return false;</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >  await sendEmail(email, 'Welcome aboard!');</span>
+<span class="cstat-no" title="statement not covered" >  await sendEmail(email, "Welcome aboard!");</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >  return true;</span>
 <span class="cstat-no" title="statement not covered" >}</span>
@@ -274,7 +274,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-05-03T22:25:14.395Z
+                at 2024-05-05T17:33:09.862Z
             </div>
         <script src="../prettify.js"></script>
         <script>

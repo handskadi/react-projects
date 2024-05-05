@@ -84,6 +84,11 @@ export function fetchData() {
   });
 }
 
+// Lesson: Testing asynchronous code Reject
+export function fetchDataReject() {
+  return Promise.reject({ reason: "Operation failed" });
+}
+
 // Lesson: Setup and teardown
 export class Stack {
   constructor() {
