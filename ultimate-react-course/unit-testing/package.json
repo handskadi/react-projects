@@ -21,6 +21,7 @@
     "@vitest/ui": "^1.5.2",
     "eslint": "^9.2.0",
     "globals": "^15.1.0",
+    "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "typescript": "^5.4.5",
