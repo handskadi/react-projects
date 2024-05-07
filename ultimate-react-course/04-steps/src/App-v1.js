@@ -6,15 +6,8 @@ const messages = [
   "Apply for jobs 💼",
   "Invest your new income 💵",
 ];
-function App() {
-  return (
-    <div>
-      <Steps />
-    </div>
-  );
-}
 
-function Steps() {
+function App() {
   const [step, setStep] = useState(1);
   const [isOpen, setIsOpen] = useState(true);
 
@@ -40,43 +33,27 @@ function Steps() {
             <div className={step >= 2 ? "active" : ""}>2</div>
             <div className={step >= 3 ? "active" : ""}>3</div>
           </div>
-          <StepMessage step={step}> {messages[step - 1]}</StepMessage>
+          <p className="message">
+            Step {step}: {messages[step - 1]}
+          </p>
+
           <div className="buttons">
-            <Button
+            <button
+              style={{ background: "#7950f2", color: "#ffffff" }}
               onClick={previousHandler}
-              bgColor={"#7950f2"}
-              textColor={"#ffffff"}
             >
-              Previouss
-            </Button>
-            <Button
+              Previous
+            </button>
+            <button
+              style={{ background: "#7950f2", color: "#ffffff" }}
               onClick={nextHandler}
-              bgColor={"#7950f2"}
-              textColor={"#ffffff"}
             >
-              NexT
-            </Button>
+              Next
+            </button>
           </div>
         </div>
       )}
     </>
-  );
-}
-
-function Button({ textColor, bgColor, onClick, children }) {
-  return (
-    <button onClick={onClick} style={{ background: bgColor, color: textColor }}>
-      {children}
-    </button>
-  );
-}
-
-function StepMessage({ step, children }) {
-  return (
-    <div className="message">
-      <h3>Step {step}</h3>
-      {children}
-    </div>
   );
 }
 

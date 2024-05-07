@@ -25,53 +25,32 @@ const Challenge5 = () => {
 };
 
 function Accordion({ data }) {
-  const [curOpen, setCurOpen] = useState(null);
   return (
     <div className="accordion">
       {data.map((el, index) => (
         <AccordionItem
           title={el.title}
           num={index}
+          text={el.text}
           key={index}
-          curOpen={curOpen}
-          onOpen={setCurOpen}
-        >
-          {el.text}
-        </AccordionItem>
+        />
       ))}
-
-      <AccordionItem
-        title="MKweb CEO"
-        num={15}
-        key={"test2 "}
-        curOpen={curOpen}
-        onOpen={setCurOpen}
-      >
-        <p>Mohamed KADI</p>
-        <ul>
-          <li>Software Engineer</li>
-          <li>Age: 36</li>
-          <li>Country: Morocco</li>
-          <li>Frontend</li>
-        </ul>
-      </AccordionItem>
     </div>
   );
 }
 
-function AccordionItem({ num, title, curOpen, onOpen, children }) {
-  // const [isOpen, setIsOpen] = useState(false);
-  const isOpen = num === curOpen;
+function AccordionItem({ num, title, text }) {
+  const [isOpen, setIsOpen] = useState(false);
 
   function toggleHandler() {
-    onOpen(isOpen ? null : num);
+    setIsOpen((i) => !isOpen);
   }
   return (
     <div className={isOpen ? "item open" : "item"} onClick={toggleHandler}>
       <p className="number">{num < 9 ? `0${num + 1}` : num + 1}</p>
       <p className="title">{title}</p>
       <p className="icon">{isOpen ? "-" : "+"}</p>
-      {isOpen && <div className="content-box">{children}</div>}
+      {isOpen && <div className="content-box">{text}</div>}
     </div>
   );
 }
