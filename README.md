@@ -12,6 +12,13 @@ Here, you'll find the practice of manually creating a webpack setup from scratch
 
 This directory houses a collection of React components developed using TypeScript and its interfaces.
 
+## Testing
+
+TDD
+Unit Testing
+React Testing
+etc..
+
 **Author:**  
 Mohamed KADI  
 Frontend Software Engineer
