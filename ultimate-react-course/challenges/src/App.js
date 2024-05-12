@@ -1,4 +1,4 @@
-import Challenge from "./Challenges/C5/Challenge5";
+import Challenge from "./Challenges/C7/Challenge7";
 
 function App() {
   return (
