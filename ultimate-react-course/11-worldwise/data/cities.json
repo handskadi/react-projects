@@ -37,40 +37,64 @@
       "id": 98443197
     },
     {
-      "cityName": "Faro",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-12-11T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": 78830385
-    },
-    {
-      "cityName": "Granada",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2027-04-16T08:22:53.976Z",
+      "cityName": "Beni Mellal",
+      "country": "Morocco",
+      "emoji": "🇲🇦",
+      "date": "2024-07-07T00:22:50.352Z",
       "notes": "",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
+        "lat": "32.34284135639302",
+        "lng": "-6.35009765625"
       },
-      "id": 19906751
+      "id": 98443198
     },
     {
-      "cityName": "Munich",
+      "cityName": "Nogueruelas",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-07-07T01:02:38.457Z",
+      "notes": "",
+      "position": {
+        "lat": "40.245991504199026",
+        "lng": "-0.5712890625000001"
+      },
+      "id": 98443199
+    },
+    {
+      "cityName": "Estigarde",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2024-07-07T01:04:07.899Z",
+      "notes": "",
+      "position": {
+        "lat": "44.040218713142146",
+        "lng": "-0.13183593750000003"
+      },
+      "id": 98443200
+    },
+    {
+      "cityName": "Belver de Cinca",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-07-07T01:09:10.106Z",
+      "notes": "",
+      "position": {
+        "lat": "41.68932225997044",
+        "lng": "0.26367187500000006"
+      },
+      "id": 98443201
+    },
+    {
+      "cityName": "Kothen",
       "country": "Germany",
       "emoji": "🇩🇪",
-      "date": "2027-03-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
+      "date": "2024-07-07T01:10:42.556Z",
+      "notes": "",
       "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
+        "lat": "51.781435604431195",
+        "lng": "11.975097656250002"
       },
-      "id": 97743197
+      "id": 98443202
     }
   ]
 }
